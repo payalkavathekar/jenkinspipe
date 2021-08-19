@@ -1,10 +1,12 @@
 pipeline {
     agent any
-
+	environment{
+		env.PATH=";c:\\Windows\\System32:env.PATH"
+	}
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
         maven "maven3"
-	env.PATH = env.PATH + ";c:\\Windows\\System32"    
+	   
     }
 
     stages {
